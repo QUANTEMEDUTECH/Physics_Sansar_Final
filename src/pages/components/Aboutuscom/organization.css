@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* General CSS starts */
+
+
+.outer_join{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 20px 0;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 0 5px rgb(46, 44, 44);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 15px rgba(128, 128, 128, 0.638);
+}
+.outer_join .info_join{
+    width: 50%;
+    height: 100%;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* z-index: 1; */
+}
+.outer_join .info_join h2{
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 10px 20px 10px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    color: rgb(71, 110, 241);
+    font-family: sans-serif;
+}
+.outer_join .info_join h1{
+    width: 100%;
+    padding: 10px 10px 5px 10px;
+    font-size: 25px;
+    color: rgb(45, 40, 40);
+}
+.outer_join .info_join p{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(45, 40, 40);
+}
+.outer_join .info_join .p1{
+    padding: 0px 0 20px 0;
+}
+.outer_join .info_join .p2{
+    padding: 10px 0 0 0 ;
+}
+.outer_join .info_join .butn_join{
+    width: 100%;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer_join .info_join .butn_join a{
+    text-decoration: none;
+    color: rgb(41, 39, 39);
+    font-size: 20px;
+    z-index: 2;
+}
+.outer_join .info_join .butn_join span{
+    position: relative;
+    z-index: 1;
+    padding: 8px 50px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(45, 40, 40);
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgb(118, 87, 242), rgb(143, 137, 237), rgb(145, 138, 244), rgb(141, 133, 249), rgb(118, 87, 242));
+    border: 1px solid blue;
+}
+.outer_join .info_join .butn_join span:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgb(42, 112, 233);
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s linear;
+}
+.outer_join .info_join .butn_join span:hover{
+    box-shadow: 0 0 10px rgb(113, 110, 110);
+    border-color: rgb(113, 110, 110);
+}
+.outer_join .info_join .butn_join span:hover:before{
+    transform: scaleX(1);
+}
+.outer_join .info_join .bg-image{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: -10;
+    opacity: 0.09;
+    width: 50%;
+    animation: movebg 4s linear infinite;
+}
+@keyframes movebg{
+    0%,5%{
+        top: 5%;
+    }
+    50%{
+        top: 20%;
+    }
+    90%,100%{
+        top: 5%;
+    }
+
+}
+
+.outer_join .team_join{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer_join .team_join .team_img{
+    width: 90%;
+    border-radius: 10px;
+    border-top-right-radius: var(--radius);
+}
+
+@media screen and (max-width: 1100px) {
+    .outer_join .team_join{
+        width: 100%;
+    }
+    .outer_join .team_join .team_img{
+       border-top-right-radius: var(--radius);
+       border-bottom-right-radius: 0px;
+    }
+    .outer_join .info_join{
+        width: auto;
+    }
+    .outer_join .info_join h1, .outer_join .info_join h2{
+        text-align: center;
+    }
+    .outer_join .info_join{
+        padding: 80px 30px;
+    }
+    .outer_join .info_join h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 600px){
+    .outer_join .info_join h2{
+        font-size: 25px;
+    }
+}
